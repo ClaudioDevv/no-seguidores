@@ -1,8 +1,9 @@
 //
-// Created por Claudio Rivas
+// Creado por Claudio Rivas
 //
 #include "Info.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 using json = nlohmann::json;
@@ -14,11 +15,6 @@ Info ::Info()
 
 // Destructor
 Info ::~Info()
-{
-}
-
-// Constructor de copia
-Info::Info(const Info &orig)
 {
 }
 
@@ -39,11 +35,10 @@ void Info::interseccion()
 // Imprimir los no followers
 ostream &operator<<(ostream &flujo, const Info &info)
 {
-    for (int i = 0; i < info.noseguidores.size(); i++)
+    for (const auto &noSeguidor : info.noseguidores)
     {
-        flujo << info.noseguidores[i] << endl;
+        flujo << noSeguidor << endl;
     }
-
     return flujo;
 }
 
