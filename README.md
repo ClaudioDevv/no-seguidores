@@ -21,6 +21,8 @@ La forma de utilizar esta herramienta es muy sencilla:
 4. La web mostrará los resultados
 
 ## Demo
+[demo_video.webm](https://github.com/user-attachments/assets/10b738a6-b912-4c22-a1fa-15b4fdd01db1)
+
 <!-- Insertar demo -->
 
 ## Explicación a Alto Nivel
@@ -52,12 +54,12 @@ La forma de utilizar esta herramienta es muy sencilla:
 6. Añade los archivos al formulario
 
 ### Estado del proyecto
-**Estadísticas actuales (Febrero 2026)**
+**Estado a fecha de la última actualización**
 Desplegado y funcionando en producción
 Usado por +800 usuarios reales verificados por Google Analytics
 Promocionado en redes sociales
 
-<!-- Aquí iría la imagen de los usuarios -->
+<img width="1918" height="918" alt="analytics" src="https://github.com/user-attachments/assets/dc62d39c-b5ca-449d-9623-4da3bc5ba271" />
 
 ### Licencia
 MIT License — ver [LICENSE](LICENSE)
