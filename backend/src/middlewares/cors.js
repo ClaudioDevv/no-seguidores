@@ -1,11 +1,8 @@
 import cors from 'cors'
 
-const ACCEPTED_ORIGINS = [
-  'https://noseguidores.com',
-  'https://proyecto-no-seguidores-claudiodevvs-projects.vercel.app',
-  'https://proyecto-no-seguidores-95etwd3yv-claudiodevvs-projects.vercel.app',
-  //'http://192.168.1.109:46725',
-]
+const ACCEPTED_ORIGINS = process.env.NODE_ENV === 'production' ? 
+  process.env.CORS_ORIGIN?.split(',') ?? [] : 
+  ['http://localhost:5173']
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
   origin: (origin, callback) => {
