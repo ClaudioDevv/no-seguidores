@@ -2,7 +2,7 @@ import cors from 'cors'
 
 const ACCEPTED_ORIGINS = process.env.NODE_ENV === 'production' ? 
   process.env.CORS_ORIGIN?.split(',') ?? [] : 
-  ['http://localhost:5173']
+  ['http://localhost:8080']
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
   origin: (origin, callback) => {

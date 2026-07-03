@@ -134,7 +134,7 @@ document.querySelector("#calcularNoSeguidores").addEventListener("click", async 
         
         let errorMsg = document.createElement("div");
         errorMsg.className = "error-message"; // Corregido: asignación de clase
-        errorMsg.innerText = "⚠️ Error: " + data.error;
+        errorMsg.innerText = "⚠️ " + data.error;
 
         salida.innerHTML = "";
         salida.appendChild(errorMsg);
