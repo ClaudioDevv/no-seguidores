@@ -8,7 +8,7 @@ const execFileAsync = promisify(execFile)
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const CPP_EXECUTABLE = path.resolve(__dirname, "../cplusplus/noseguidores")
+const CPP_EXECUTABLE = path.resolve(__dirname, "../../cplusplus/noseguidores")
 
 export const procesarArchivos = async (seguidosPath, seguidoresPath) => {
   try {
