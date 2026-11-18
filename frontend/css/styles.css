@@ -674,3 +674,88 @@ footer{
         transform: translateY(0);
     }
 }
+
+/* SECCIONES DE TEXTO: pasos, FAQ y guías (contenido legible sin imágenes) */
+.contenido-texto {
+    width: 100%;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.contenido-texto h2 {
+    font-size: 40px;
+    margin: 30px 0 15px 0;
+    text-align: left;
+}
+
+.contenido-texto h3 {
+    font-size: 26px;
+    margin: 25px 0 10px 0;
+    text-align: left;
+}
+
+.contenido-texto p,
+.contenido-texto li {
+    font-size: 20px;
+    color: grey;
+    line-height: 1.6;
+}
+
+.contenido-texto ol,
+.contenido-texto ul {
+    padding-left: 28px;
+    margin: 10px 0;
+}
+
+.contenido-texto li {
+    margin-bottom: 8px;
+}
+
+.contenido-texto strong,
+.contenido-texto code {
+    color: white;
+}
+
+.contenido-texto a {
+    color: white;
+}
+
+.contenido-texto details {
+    border-top: 1px solid #333;
+    padding: 16px 0;
+}
+
+.contenido-texto summary {
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.contenido-texto details p {
+    margin-top: 10px;
+}
+
+.guia-hero h1 {
+    font-size: 56px;
+    text-align: left;
+    margin: 40px 0 10px 0;
+}
+
+.cta-herramienta {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 14px 28px;
+    background: white;
+    color: black !important;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .contenido-texto h2 { font-size: 30px; }
+    .guia-hero h1 { font-size: 36px; }
+}

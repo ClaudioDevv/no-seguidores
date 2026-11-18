@@ -1,7 +1,70 @@
 User-agent: *
 Allow: /
-Disallow: /privacidad.html
 
+# --- Buscadores y asistentes de IA: acceso explícito ---
+# OpenAI (ChatGPT: entrenamiento, búsqueda y navegación del usuario)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (AI Overviews / Gemini) y Apple Intelligence
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI, Mistral, xAI (Grok), Common Crawl y otros corpus usados por IAs
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: GrokBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Monitorización de disponibilidad
 User-agent: UptimeRobot
 Allow: /
 

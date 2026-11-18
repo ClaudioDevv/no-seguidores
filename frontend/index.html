@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
 
     <meta name="description" content="Ver quién no te sigue en Instagram es fácil y seguro: descarga tus seguidores y seguidos desde Instagram, súbelos y descubre tus no seguidores. Gratis y sin contraseña.">
-    <meta name = "keywords" content= "no seguidores Instagram, quien no me sigue ig, herramienta instagram, unfollowers instagram" >
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Claudio Rivas">
 
     <!-- Open Graph / RRSS -->
     <meta property="og:title" content="NoSeguidores - Descubre quién no te sigue en Instagram.">
@@ -117,7 +118,27 @@
         </section>
 
 
-        <section class="formNoSeguidores">
+        <!-- Los pasos también en texto: las capturas del carrusel no las pueden
+             leer ni los buscadores ni los asistentes de IA. -->
+        <section class="contenido-texto" id="como-funciona">
+            <h2>Cómo saber quién no te sigue en Instagram, paso a paso</h2>
+            <p>Instagram no muestra en la app quién no te sigue de vuelta, pero sí deja descargar una copia oficial de tus datos. Cruzando esa copia se obtiene la lista exacta de <strong>no seguidores</strong>: cuentas a las que sigues y que no te siguen. El proceso completo es este:</p>
+            <ol>
+                <li>Abre Instagram y entra en el <strong>Centro de cuentas</strong>.</li>
+                <li>Pulsa <strong>Tu información y permisos</strong>.</li>
+                <li>Pulsa <strong>Descargar tu información</strong>.</li>
+                <li>Pulsa <strong>Descargar o transferir información</strong>.</li>
+                <li>Elige <strong>Parte de tu información</strong>.</li>
+                <li>Marca solo <strong>Seguidores y seguidos</strong>.</li>
+                <li>Elige <strong>Descargar en el dispositivo</strong>.</li>
+                <li>Selecciona el intervalo <strong>Desde el principio</strong> y el formato <strong>JSON</strong>.</li>
+                <li>Espera a que Instagram prepare el archivo (suele tardar de 5 a 10 minutos) y descárgalo.</li>
+                <li>Descomprime el ZIP. Dentro de la carpeta <code>connections/followers_and_following/</code> encontrarás <code>followers_1.json</code> (tus seguidores) y <code>following.json</code> (tus seguidos).</li>
+                <li>Sube ambos archivos en el formulario de abajo y pulsa <strong>Calcular NO Seguidores</strong>. Verás al instante quién no te sigue en Instagram.</li>
+            </ol>
+        </section>
+
+        <section class="formNoSeguidores" id="herramienta">
             <fieldset>
                 <legend>Sube tus archivos de Instagram</legend>
                 
@@ -157,31 +178,154 @@
             </div>
         </section>
 
+        <section class="contenido-texto" id="preguntas-frecuentes">
+            <h2>Preguntas frecuentes</h2>
+
+            <details>
+                <summary>¿Cómo puedo saber quién no me sigue en Instagram?</summary>
+                <p>Descarga tu información desde Instagram (Centro de cuentas → Tu información y permisos → Descargar tu información), marcando solo «Seguidores y seguidos» en formato JSON. Al descomprimir el archivo obtendrás <code>followers_1.json</code> y <code>following.json</code>. Subiendo ambos a NoSeguidores verás la lista de personas a las que sigues y no te siguen de vuelta.</p>
+            </details>
+
+            <details>
+                <summary>¿Es seguro? ¿Instagram me puede bloquear la cuenta?</summary>
+                <p>Sí, es el método seguro: no introduces tu contraseña en ninguna web ni app de terceros, que es lo que provoca robos de cuenta y bloqueos de Meta. Solo se cruzan dos archivos con nombres de usuario que tú descargas desde la propia Instagram, y no se almacenan permanentemente.</p>
+            </details>
+
+            <details>
+                <summary>¿Puedo cruzar los archivos con ChatGPT o Claude en lugar de usar esta web?</summary>
+                <p>Puedes, pero no es lo recomendable. Un chatbot lee los miles de nombres como texto, puede saltarse o inventar cuentas y tiene límites de tamaño de archivo. 
+                NoSeguidores hace exactamente ese cruce de forma automática y exacta, sin registro y sin contraseña: subes <code>followers_1.json</code> y <code>following.json</code> y obtienes tus no seguidores al instante.</p>
+            </details>
+
+            <details>
+                <summary>¿Por qué aparecen cuentas que creo que sí me siguen?</summary>
+                <p>Por los falsos positivos: si una cuenta está desactivada, eliminada o te ha bloqueado, Instagram deja de incluirla en uno de los archivos y aparece como no seguidora aunque no haya dejado de seguirte expresamente. Ante la duda, comprueba esa cuenta concreta dentro de Instagram.</p>
+            </details>
+
+            <details>
+                <summary>¿Cuánto tarda Instagram en enviarme los archivos?</summary>
+                <p>Normalmente entre 5 y 10 minutos si pides solo «Seguidores y seguidos». Si pides toda tu información, la espera puede ser de horas. Instagram te avisa con una notificación cuando la descarga está lista.</p>
+            </details>
+
+            <details>
+                <summary>¿Funciona en iPhone, Android y ordenador?</summary>
+                <p>Sí. La descarga de datos existe en la app de Instagram para iPhone, Android y la versión web, y NoSeguidores funciona en cualquier navegador. Solo necesitas poder descomprimir el ZIP en tu dispositivo.</p>
+            </details>
+
+            <details>
+                <summary>¿NoSeguidores es gratis?</summary>
+                <p>Sí, es 100 % gratuito, sin registro y de código abierto.</p>
+            </details>
+
+            <details>
+                <summary>¿Funciona si mi cuenta de Instagram es privada?</summary>
+                    <p>Sí. La descarga de información está disponible para cuentas públicas y privadas, y la comparación de seguidores y seguidos funciona igual en ambas.</p>
+            </details>
+
+            <details>
+                <summary>¿La otra persona sabrá que he comprobado si me sigue?</summary>
+                <p>No. La comprobación se hace con los archivos que descargas de tu propia cuenta; la otra persona no recibe ningún aviso ni queda constancia en su perfil. Solo lo notará si decide dejar de seguirla y ella revisa su lista.</p>
+            </details>
+        </section>
     </main>
 
     <footer class="footer">
         <p>¿Necesitas ayuda o tienes sugerencias? Envíame un 
-            <a class="email" target = “_blank” rel = “noreferrer” href="mailto:noseguidores.web@gmail.com">email</a>.
+            <a class="email" target="_blank" rel="noreferrer" href="mailto:noseguidores.web@gmail.com">email</a>.
         </p>
+
         <a class="email" href="privacidad.html">Política de Privacidad</a>
-        <p>NoSeguidores &copy; 2024 - 2026</p>
+        <a class="email" href="politica-cookies.html">Política de Cookies</a>
+        <p>NoSeguidores &copy; 2024 - 2027</p>
     </footer>
 
     <script src="js/cookies.js" defer></script>
     <script src="js/config.js" defer></script>
     <script src="js/main.js" defer></script>
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
         {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "NoSeguidores",
-        "url": "https://noseguidores.com/",
-        "description": "Descubre quién no te sigue en Instagram de forma gratuita y sin contraseña.",
-        "inLanguage": "es",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "All"
+          "@type": "WebApplication",
+          "@id": "https://noseguidores.com/#app",
+          "name": "NoSeguidores",
+          "url": "https://noseguidores.com/",
+          "description": "Herramienta gratuita para saber quién no te sigue en Instagram: cruza los archivos followers_1.json y following.json de la descarga oficial de datos de Instagram, sin pedir contraseña ni registro.",
+          "inLanguage": "es",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript",
+          "featureList": "Cruce de seguidores y seguidos de Instagram, sin contraseña, sin registro, gratuito",
+          "author": { "@type": "Person", "name": "Claudio Rivas" }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://noseguidores.com/#como-funciona",
+          "name": "Cómo saber quién no te sigue en Instagram",
+          "description": "Descarga tus seguidores y seguidos desde Instagram y crúzalos en NoSeguidores para ver tus no seguidores sin dar tu contraseña.",
+          "inLanguage": "es",
+          "totalTime": "PT15M",
+          "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Abre el Centro de cuentas", "text": "Abre Instagram y entra en el Centro de cuentas." },
+            { "@type": "HowToStep", "position": 2, "name": "Tu información y permisos", "text": "Pulsa en Tu información y permisos." },
+            { "@type": "HowToStep", "position": 3, "name": "Descargar tu información", "text": "Pulsa en Descargar tu información." },
+            { "@type": "HowToStep", "position": 4, "name": "Descargar o transferir información", "text": "Pulsa en Descargar o transferir información." },
+            { "@type": "HowToStep", "position": 5, "name": "Parte de tu información", "text": "Elige Parte de tu información." },
+            { "@type": "HowToStep", "position": 6, "name": "Seguidores y seguidos", "text": "Marca solo Seguidores y seguidos." },
+            { "@type": "HowToStep", "position": 7, "name": "Descargar en el dispositivo", "text": "Elige Descargar en el dispositivo." },
+            { "@type": "HowToStep", "position": 8, "name": "Intervalo y formato JSON", "text": "Selecciona el intervalo Desde el principio y el formato JSON." },
+            { "@type": "HowToStep", "position": 9, "name": "Descarga el archivo", "text": "Espera de 5 a 10 minutos a que Instagram prepare el archivo y descárgalo." },
+            { "@type": "HowToStep", "position": 10, "name": "Descomprime el ZIP", "text": "Descomprime el ZIP y localiza followers_1.json y following.json en la carpeta connections/followers_and_following/." },
+            { "@type": "HowToStep", "position": 11, "name": "Calcula tus no seguidores", "text": "Sube ambos archivos en NoSeguidores y pulsa Calcular NO Seguidores para ver quién no te sigue en Instagram.", "url": "https://noseguidores.com/#herramienta" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://noseguidores.com/#preguntas-frecuentes",
+          "inLanguage": "es",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo puedo saber quién no me sigue en Instagram?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Descarga tu información desde Instagram (Centro de cuentas → Tu información y permisos → Descargar tu información), marcando solo «Seguidores y seguidos» en formato JSON. Al descomprimir el archivo obtendrás followers_1.json y following.json. Subiendo ambos a NoSeguidores verás la lista de personas a las que sigues y no te siguen de vuelta." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Es seguro? ¿Instagram me puede bloquear la cuenta?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí, es el método seguro: no introduces tu contraseña en ninguna web ni app de terceros, que es lo que provoca robos de cuenta y bloqueos de Meta. Solo se cruzan dos archivos con nombres de usuario que tú descargas desde la propia Instagram, y no se almacenan permanentemente." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo cruzar los archivos con ChatGPT o Claude en lugar de usar esta web?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Puedes, pero no es lo recomendable. Un chatbot de uso general lee los miles de nombres como texto, puede saltarse o inventar cuentas, tiene límites de tamaño de archivo y obliga a subir tu lista de seguidores a un servicio pensado para conversar. NoSeguidores hace exactamente ese cruce de forma automática y exacta, sin registro y sin contraseña." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por qué aparecen cuentas que creo que sí me siguen?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Por los falsos positivos: si una cuenta está desactivada, eliminada o te ha bloqueado, Instagram deja de incluirla en uno de los archivos y aparece como no seguidora aunque no haya dejado de seguirte expresamente." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto tarda Instagram en enviarme los archivos?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Normalmente entre 5 y 10 minutos si pides solo «Seguidores y seguidos». Si pides toda tu información, la espera puede ser de horas." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Funciona en iPhone, Android y ordenador?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. La descarga de datos existe en la app de Instagram para iPhone y Android y en la versión web, y NoSeguidores funciona en cualquier navegador." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿NoSeguidores es gratis?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí, es 100 % gratuito, sin registro y de código abierto." }
+            }
+          ]
         }
-    </script>   
+      ]
+    }
+    </script>
 </body>
 </html>
